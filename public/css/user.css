@@ -1,0 +1,72 @@
+@import url("./global.css");
+
+body {
+    padding: 15px;
+    color: white;
+}
+
+.user-profile {
+    padding: 10px;
+    display: flex;
+    gap: 15px;
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    position: relative;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    padding: auto;
+    width: 35%;
+}
+
+.profile>img[alt="avatar_url"] {
+    border-radius: 50%;
+    width: 55%;
+    height: 55%;
+}
+
+ul.repo-wrapper {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+    align-items: start;
+    width: calc(100% - 35%);
+}
+
+ul.repo-wrapper li {
+    background-color: #222;
+    color: white;
+    padding-inline: 12px;
+    padding-block: 8px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, .1);
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+ul.repo-wrapper li:hover {
+    border: 1px solid rgba(255, 255, 255, .5);
+    transform: scale(1.5);
+}
+
+button.logout-btn {
+    position: absolute;
+    background-color: rgb(224 36 36);
+    border: none;
+    padding: 8px 16px;
+    right: 1%;
+    bottom: 1%;
+    border-radius: inherit;
+    color: white;
+    cursor: pointer;
+    transition: all 250ms;
+}
+
+button.logout-btn:hover {
+    transform: translateY(-5%);
+}

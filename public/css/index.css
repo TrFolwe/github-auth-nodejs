@@ -1,0 +1,62 @@
+@import url("./global.css");
+
+a.header-link {
+    color: inherit;
+    border-radius: 5px;
+    padding: 5px;
+    box-sizing: unset;
+    background-color: white;
+    transition: all 250ms;
+}
+
+a.header-link:hover {
+    background-color: black;
+    color: white;
+}
+
+a:not(.header-link) {
+    width: 25%;
+    height: 50%;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+a:not(.header-link)>img {
+    width: 96%;
+    height: 96%;
+    border-radius: 50%;
+}
+
+body {
+    display: grid;
+    place-items: center;
+}
+
+header.github-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #ccc;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        background-color: red;
+    }
+
+    a:not(.header-link)>img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+}

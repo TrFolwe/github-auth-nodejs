@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= user.login %>
+    </title>
+    <link rel="stylesheet" href="/public/css/user.css">
+    <link rel="icon" type="image/x-icon" href="<%= user.avatar_url %>">
+</head>
+
+<body>
+    <div class="user-profile">
+        <a href="http://localhost/auth/logout"><button class="logout-btn">Log Out Account</button></a>
+        <div class="profile">
+            <h2>
+                <%= user.login %> (<%= user.name %>)
+            </h2>
+            <img src="<%= user.avatar_url  %>" alt="avatar_url">
+            <h4 style="width: 50%;" class="bio-text">
+                <%= user.bio %>
+            </h4>
+        </div>
+        <ul class="repo-wrapper">
+            <% repos.forEach(repo=> { %>
+                <a target="_blank" href="<%=repo.html_url%>">
+                    <li repo-id="<%= repo.id %>">
+                        <%= repo.name %>
+                    </li>
+                </a>
+                <% })%>
+        </ul>
+    </div>
+</body>
+
+</html>
